@@ -179,13 +179,12 @@ public class Complex{
 	}
 
 	/**
-	*
+	*Eine Instanzmethode die einen Hashcode für ein Complex Objekt Gegenübergestellt
+	*@return Es wird der Wert des Realteils mal fünf plus dem Wert des Imaginärteils mal sieben zurückgegeben.
 	*/
 	public int hashCode(){
-		String str = "" +real +imaginary;
-		str.replaceAll(".","0");
-		str.replaceAll("-","0");
-		return Integer.parseInt(str);
+		int hash = (int) (real *7 +imaginary *5);
+		return hash;
 	}
 
 	/**
